@@ -1,0 +1,314 @@
+@mixin resetCss {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@mixin centerFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    @include resetCss();
+    height: 100vh;
+    width: 100vw;
+
+    >header {
+        @include resetCss();
+        height: 20%;
+        box-sizing: border-box;
+    }
+
+    >.mainContainer {
+
+        @include resetCss();
+        height: 80%;
+        background-color: black;
+        grid-gap: 3px;
+
+        >.row {
+            @include resetCss();
+            display: grid;
+            grid-gap: 3px;
+
+            >.excel {
+                @include resetCss();
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                background-color: aliceblue;
+                overflow: hidden;
+
+                >.sheetContainer {
+
+                    height: 95%;
+                    width: 100%;
+
+
+                    >.sheet {
+
+                        height: 100%;
+                        width: 100%;
+
+                        >.topSection {
+                            @include resetCss();
+
+                            height: 5%;
+                            width: 100%;
+                            box-sizing: border-box;
+                            display: flex;
+
+                            >.nothing {
+                                width: 3%;
+                                height: 100%;
+
+                            }
+
+                            >.upperCanvas {
+                                width: 97%;
+                                height: 100%;
+                                position: relative;
+
+                                >.horizontalCanvas {
+                                    width: 99%;
+                                    height: 100%;
+                                    //positioning is used inorder to tackle the default behaviour of canvas
+                                    position: absolute;
+                                    top: 0%;
+                                    left: 0%;
+                                }
+                            }
+
+                        }
+
+                        >.middleSection {
+                            // border: 1px solid green;
+                            height: 95%;
+                            display: flex;
+                            width: 100%;
+                            box-sizing: border-box;
+                            position: relative;
+
+                            >.verticalCanvas {
+                                // border: 1px solid grey;
+                                width: 3%;
+                                height: 98%;
+                                position: absolute;
+                                top: 0;
+                                // background-color: green;
+                                left: 0;
+
+                            }
+
+                            >.fullCanvas {
+                                width: 97%;
+                                height: 100%;
+                                display: flex;
+                                position: absolute;
+                                left: 3%;
+                                top: 0%;
+
+                                >.spreadsheetCanvas {
+                                    width: 99%;
+                                    height: 98%;
+                                    background-color: white;
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                }
+
+                                >.horizontalScroll {
+                                    box-sizing: border-box;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 0;
+                                    height: 2%;
+                                    width: 99%;
+                                    @include centerFlex();
+
+                                    >.horizontalBar {
+                                        height: 80%;
+                                        width: 50%;
+                                        background-color: grey;
+                                        position: absolute;
+                                        left: 0px;
+                                        border-radius: 25px;
+                                    }
+
+                                }
+
+                                >.verticalScroll {
+                                    // border: 1px solid yellow;
+                                    transition: all 0.1s;
+                                    box-sizing: border-box;
+                                    position: absolute;
+                                    height: 98%;
+                                    top: 0;
+                                    right: 0;
+                                    width: 1%;
+                                    @include centerFlex();
+
+                                    >.verticalBar {
+                                        height: 50%;
+                                        width: 80%;
+                                        background-color: grey;
+                                        position: absolute;
+                                        top: 0;
+                                        border-radius: 25px;
+                                    }
+
+                                }
+
+                                >input {
+                                    @include resetCss();
+                                    display: none;
+                                    position: absolute;
+                                    border: none;
+                                    outline: none;
+                                    padding: 5px 10px;
+                                    margin: 2px;
+                                }
+                            }
+                        }
+
+                    }
+                }
+
+                >.footer {
+                    min-height: 30px;
+                    height: 5%;
+                    width: 100%;
+                    @include centerFlex();
+                    justify-content: start;
+                    @include resetCss();
+
+                    overflow-x: auto;
+                    overflow-y: hidden;
+
+
+
+                    >.buttons {
+
+                        @include resetCss();
+                        height: 100%;
+                        width: 50%;
+                        display: flex;
+
+
+                        button {
+                            @include resetCss();
+                            margin: 5px 5px;
+                            padding: 5px 10px;
+                            border: 1px solid #ccc;
+                            @include centerFlex();
+                            background-color: #f9f9f9;
+                            cursor: pointer;
+                            position: relative;
+
+                            &:hover {
+                                background-color: #e9e9e9;
+                            }
+
+                            .close {
+                                @include resetCss();
+                                font-size: 10px;
+                                font-weight: bold;
+                                position: absolute;
+                                top: -5px;
+                                right: -5px;
+                                width: 15px;
+                                height: 15px;
+                                background-color: red;
+                                color: white;
+                                border: none;
+                                border-radius: 50%;
+                                cursor: pointer;
+                            }
+
+                            &:hover .close {
+                                display: block;
+                            }
+
+                            &.active {
+                                background-color: #d0ebff;
+                                border-color: #8ac4d0;
+                            }
+
+
+                        }
+
+
+                        >.scrollableButtons {
+
+                            @include resetCss();
+                            display: flex;
+                            overflow-y: hidden;
+                            overflow-x: auto;
+
+                            // Custom scrollbar styles for the footer
+                            &::-webkit-scrollbar {
+                                height: 3px;
+                            }
+
+                            &::-webkit-scrollbar-track {
+                                background: #f1f1f1;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                background: #888;
+                                border-radius: 5px;
+                            }
+
+                            &::-webkit-scrollbar-thumb:hover {
+                                background: #555;
+                            }
+
+                            // Custom scrollbar styles for the footer
+                            &::-webkit-scrollbar {
+                                height: 3px;
+                            }
+
+                            &::-webkit-scrollbar-track {
+                                background: #f1f1f1;
+                            }
+
+                            &::-webkit-scrollbar-thumb {
+                                background: #888;
+                                border-radius: 5px;
+                            }
+
+                            &::-webkit-scrollbar-thumb:hover {
+                                background: #555;
+                            }
+                        }
+
+
+                    }
+
+
+
+                    >.selectedCellInfo {
+                        width: 50%;
+                        @include resetCss();
+                        height: 100%;
+                        @include centerFlex();
+                        flex-wrap: wrap;
+
+                        >.selectedCellInfoElements{
+                            @include resetCss();
+                            font-size: 14px;
+                            color: grey;
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+
+    }
+
+}

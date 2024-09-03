@@ -1,0 +1,267 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+}
+body > header {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  height: 20%;
+  box-sizing: border-box;
+}
+body > .mainContainer {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  height: 80%;
+  background-color: black;
+  grid-gap: 3px;
+}
+body > .mainContainer > .row {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  display: grid;
+  grid-gap: 3px;
+}
+body > .mainContainer > .row > .excel {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: aliceblue;
+  overflow: hidden;
+}
+body > .mainContainer > .row > .excel > .sheetContainer {
+  height: 95%;
+  width: 100%;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet {
+  height: 100%;
+  width: 100%;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .topSection {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  height: 5%;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .topSection > .nothing {
+  width: 3%;
+  height: 100%;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .topSection > .upperCanvas {
+  width: 97%;
+  height: 100%;
+  position: relative;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .topSection > .upperCanvas > .horizontalCanvas {
+  width: 99%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .middleSection {
+  height: 95%;
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .middleSection > .verticalCanvas {
+  width: 3%;
+  height: 98%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .middleSection > .fullCanvas {
+  width: 97%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  left: 3%;
+  top: 0%;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .middleSection > .fullCanvas > .spreadsheetCanvas {
+  width: 99%;
+  height: 98%;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .middleSection > .fullCanvas > .horizontalScroll {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2%;
+  width: 99%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .middleSection > .fullCanvas > .horizontalScroll > .horizontalBar {
+  height: 80%;
+  width: 50%;
+  background-color: grey;
+  position: absolute;
+  left: 0px;
+  border-radius: 25px;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .middleSection > .fullCanvas > .verticalScroll {
+  transition: all 0.1s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 98%;
+  top: 0;
+  right: 0;
+  width: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .middleSection > .fullCanvas > .verticalScroll > .verticalBar {
+  height: 50%;
+  width: 80%;
+  background-color: grey;
+  position: absolute;
+  top: 0;
+  border-radius: 25px;
+}
+body > .mainContainer > .row > .excel > .sheetContainer > .sheet > .middleSection > .fullCanvas > input {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  display: none;
+  position: absolute;
+  border: none;
+  outline: none;
+  padding: 5px 10px;
+  margin: 2px;
+}
+body > .mainContainer > .row > .excel > .footer {
+  min-height: 30px;
+  height: 5%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: start;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 50%;
+  display: flex;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons button {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  margin: 5px 5px;
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  position: relative;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons button:hover {
+  background-color: #e9e9e9;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons button .close {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 10px;
+  font-weight: bold;
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons button:hover .close {
+  display: block;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons button.active {
+  background-color: #d0ebff;
+  border-color: #8ac4d0;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons > .scrollableButtons {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons > .scrollableButtons::-webkit-scrollbar {
+  height: 3px;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons > .scrollableButtons::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons > .scrollableButtons::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons > .scrollableButtons::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons > .scrollableButtons::-webkit-scrollbar {
+  height: 3px;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons > .scrollableButtons::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons > .scrollableButtons::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+body > .mainContainer > .row > .excel > .footer > .buttons > .scrollableButtons::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+body > .mainContainer > .row > .excel > .footer > .selectedCellInfo {
+  width: 50%;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body > .mainContainer > .row > .excel > .footer > .selectedCellInfo > .selectedCellInfoElements {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: grey;
+}/*# sourceMappingURL=style.css.map */
